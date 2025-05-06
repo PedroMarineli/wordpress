@@ -2,10 +2,15 @@ services:
   wordpress:
     image: wordpress:latest
     ports:
-      - 80:80
-    restart: always
+      - "80:80"
+    volumes:
+      - /mnt/efs/wordpress:/var/www/html
     env_file:
       - .env
-
-  
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
     
