@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #Variaveis
-FILE_SYSTEM_ID=fs-06409a8200831af8e.efs.us-east-1.amazonaws.com
+FILE_SYSTEM_ID=  [seu dns do efs]
 EFS_MOUNT_POINT=/mnt/efs/wordpress
 GIT_REPO_URL=https://github.com/PedroMarineli/wordpress.git
-DB_HOST=wp-database.c8fk4ougqlv1.us-east-1.rds.amazonaws.com
+DB_HOST= [seu db host]
 DB_USER=admin
 DB_PASSWORD=senha-segura
 DB_NAME=wordpress
@@ -12,10 +12,10 @@ DB_NAME=wordpress
 $Efs
 sudo apt-get update
 sudo apt-get install -y nfs-common
-sudo mkdir -p /mnt/efs/wordpress
-sudo mount -t nfs4 -o nfsvers=4.1 fs-06409a8200831af8e.efs.us-east-1.amazonaws.com:/ /mnt/efs/wordpress
-sudo chown -R www-data:www-data /mnt/efs/wordpress
-sudo chmod -R 755 /mnt/efs/wordpress
+sudo mkdir -p $EFS_MOUNT_POINT
+sudo mount -t nfs4 -o nfsvers=4.1 $FILE_SYSTEM_ID:/ $EFS_MOUNT_POINT
+sudo chown -R www-data:www-data $EFS_MOUNT_POINT
+sudo chmod -R 755 $EFS_MOUNT_POINT
 
 #Git
 cd /
