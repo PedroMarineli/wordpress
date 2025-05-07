@@ -26,16 +26,34 @@
     Protocolo HTTP na porta 80.
 - Criar AMI base:
   - Criar EC2
+
+    Utilizar configurações padrão com acesso a internet, apenas para servir de molde para a criação da AMI.
   - Atualizar sistema + dependências
+
+    Atualize o sistema e instale as dependências do projeto para otimizar o tempo de inicialização do ASG. 
   - Criar userdata + AMI
+
+    Crie o userdata da AMI (código abaixo).
   - Testar userdata e AMI
+ 
+    Teste o userdata e se estiver tudo certo, crie a imagem.
 - Criar Launch Template:
   - Criar EC2 a partir da AMI
+ 
+    A partir da imagem criada instancie um maquina EC2 e verifique se está tudo certo.
   - Configurar Wordpress e EFS
+ 
+    Configure o Wordpress com o git e docker compose e faça a montagem do sistema de arquivos.
   - Configurar userdata do Launch Template
+ 
+    Crie o userdata com os comandos executados (código abaixo).
   - Testar e criar o Launch Template
+ 
+    Teste o userdata e se estiver tudo certo, crie o launch template.
 - Criar ASG:
   - Criar Auto Scaling Group
+
+    Utilize o launch template criado, e selecione as
 #### Código:
 
 ##### compose.yaml
