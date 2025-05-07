@@ -1,6 +1,10 @@
 # Projeto Wordpress + RDS + EFS + ASG na AWS
+---
 ![Passo a passo do projeto.](passoapasso)
-### Sumário
+
+---
+### Vídeo para referência: [Compass OUL DevSecOps project](https://youtu.be/Z2CLUppdeBg)
+### Resumo
 - Configurar ambiente:
   - Criar VPC
   - Criar Security groups
