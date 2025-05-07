@@ -9,7 +9,7 @@ DB_USER=admin
 DB_PASSWORD=senha-segura
 DB_NAME=wordpress
 
-$Efs
+#Efs
 sudo apt-get update
 sudo apt-get install -y nfs-common
 sudo mkdir -p $EFS_MOUNT_POINT
