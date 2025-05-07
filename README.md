@@ -1,16 +1,20 @@
 # Projeto Wordpress + RDS + EFS + ASG na AWS
 ---
 ![Passo a passo do projeto.](passoapasso)
-
 ---
 ### Vídeo para referência: [Compass OUL DevSecOps project](https://youtu.be/Z2CLUppdeBg)
-
 ---
 ### Resumo
 - Configurar ambiente:
   - Criar VPC
+ 
+    Necessário criar 1 vpc com 2 subnets públicas e 2 privadas, com 1 NAT Gateway em cada AZ privada referenciada pelo Target Group.
   - Criar Security groups
+ 
+    Necessário criar 4 security groups: RDS, EFS, EC2 e Load Balancer. (configurações exatas mostradas no vídeo)
   - Criar RDS
+
+    Criar banco MySql utilizando configurações voltadas para o tier gratuito, atentar-se em colocar as informações corretas nas variáveis do userdata do Launch       Template.
   - Criar EFS
   - Criar Load Balancer
   - Criar Target Group
