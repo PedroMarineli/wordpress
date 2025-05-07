@@ -16,6 +16,8 @@
 
     Criar banco MySql utilizando configurações voltadas para o tier gratuito, atentar-se em colocar as informações corretas nas variáveis do userdata do Launch       Template.
   - Criar EFS
+ 
+    Zona de disponibilidade regional e modo de desempenho de uso geral, atentar-se em colocar as informações corretas nas variáveis do userdata do Launch       Template.
   - Criar Load Balancer
   - Criar Target Group
 - Criar AMI base:
