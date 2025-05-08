@@ -53,7 +53,7 @@
 - Criar ASG:
   - Criar Auto Scaling Group
 
-    Utilize o launch template criado, e selecione as zonas de disponibilidades e subnets.
+    Utilize o launch template criado, e selecione as zonas de disponibilidades e subnets privadas.
 #### Código:
 
 ##### compose.yaml
